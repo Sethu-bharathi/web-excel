@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excel</title>
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-    <header>
-
-    </header>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header></header>
     <main class="main">
-        <form class="excel-form">
-            <label for="row">Enter the number of rows</label>
-            <input type="number" name="" id="row">
-            <label for="column">Enter the number of columns</label>
-            <input type="number" name="" id="column">
-            <input type="button" value="submit" onClick=createExcel()>
-        </form>
+      <form class="excel-form">
+        <label for="row">Enter the number of rows</label>
+        <input type="number" name="" id="row" />
+        <label for="column">Enter the number of columns</label>
+        <input type="number" name="" id="column" />
+        <input type="button" value="submit" onClick="createGridNM()" />
+      </form>
     </main>
     <section class="table-container">
-        <table id="create">
-        </table>
+      <div id="create"></div>
+      <div class="add-btn">
+        <button onclick="addRow()">Add row</button
+        ><button onclick="deleteRow()">delete row</button
+        ><button onclick="addColumn()">add column</button
+        ><button onclick="deleteColumn()">delete column</button>
+      </div>
     </section>
     <footer></footer>
     <script src="/Js/index.js"></script>
-</body>
+  </body>
 </html>

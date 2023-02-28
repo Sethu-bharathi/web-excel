@@ -1,11 +1,22 @@
 * {
   box-sizing: border-box;
 }
+html{
+  font-size: 16px;
+}
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   height: max(100vh, 0px);
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: scroll;
 }
 .active {
   display: none !important;
@@ -29,8 +40,7 @@ input[type="button"] {
   margin-top: 0.5rem;
 }
 td:focus {
-  border: none;
-  outline: none;
+  border: #000 2px solid;
 }
 table,
 th,
@@ -38,8 +48,54 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-
+.cell{
+  border: 1px solid #bbb;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 1.4rem;
+  max-height: 1.4rem;
+  overflow: hidden;
+}
+.cell:focus-visible{
+  border: 2px solid #000;
+  outline: none;
+}
 .table-container {
-  width: auto;
-  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create{
+  padding: 0 300px;
+}
+.row{
+  display: flex;
+}
+
+.add-btn{
+  position:fixed;
+  bottom:40px;
+  right:40px;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.add-btn>button{
+  cursor: pointer;
+  padding: 10px 1rem;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  color:white;
+}
+.add-btn>button::first-letter{
+  text-transform: uppercase;
+}
+.add-btn>button:nth-child(odd){
+  background-color: #f5465d;
+}
+.add-btn>button:nth-child(even){
+  background-color: #39b385;
 }
