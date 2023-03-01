@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <label for="user">User </label>
+      <select name="user" id="user" onchange="changeHandler(this)">
+        <option value="new User">New user</option>
+      </select>
+    </header>
     <main class="main">
-      <form class="excel-form">
+      <form class="excel-form active">
+        <label for="new-user">User Name</label>
+        <input type="text" name="" id="new-user" />
         <label for="row">Enter the number of rows</label>
         <input type="number" name="" id="row" />
         <label for="column">Enter the number of columns</label>

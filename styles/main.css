@@ -18,6 +18,17 @@ body{
   min-width: 100vw;
   overflow-x: scroll;
 }
+.header{
+  position:fixed;
+  height: 100px;
+  width: 100vw;
+  padding-right: 5%;
+  gap:10px;
+  top:0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .active {
   display: none !important;
 }
